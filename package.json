@@ -1,0 +1,23 @@
+{
+  "name": "techpedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GGOMJIROCK/Techpedia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GGOMJIROCK/Techpedia/issues"
+  },
+  "homepage": "https://github.com/GGOMJIROCK/Techpedia#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "express": "^4.15.3"
+  }
+}
