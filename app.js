@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
-app.get('/', function(req, res){
-    res.send('Hello world');
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+
+app.get('/', function (req, res) {
+    console.log('Some user connected.');
+    res.sendFile(__dirname + '/app/index.html');
 });
-app.listen(80, function(){
-    console.log('Connect 80 port');
+var server = app.listen(8080, function () {
+    console.log('Executed Server!!');
 });
