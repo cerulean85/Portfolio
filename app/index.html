@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    <title>Techpedia</title>
+    <link rel="stylesheet" type="text/css" href="/css/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(window).resize(function() {
+                var width = $(window).width();
+                $('title').text("Techpedia" + width);
+            });
+
+        })
+
+    </script>
 </head>
 <body>
+<div id="header"></div>
+<div class="bg_menu">
+<!--<div class="bg_logo">-->
+    <!--<img src="/images/600_300_TURQUOISE.jpg">-->
+<!--</div>-->
+</div>
+
+</div>
 
 </body>
 </html>
