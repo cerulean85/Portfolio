@@ -7,23 +7,80 @@
     <link rel="stylesheet" type="text/css" href="/css/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="//code.jquery.com/jquery.min.js"></script>
+
     <script>
         $(document).ready(function(){
 
-            $(window).resize(function() {
-                var width = $(window).width();
-                $('title').text("Techpedia" + width);
+            setContentWidth();
+            windowResize();
+            scrollPage();
+
+            $("#content").animate({
+                top : 100
+            }, 400, function() {
+
             });
 
+            /* 브라우즈 창 크기가 변경될 때의 설정 */
+            function windowResize() {
+                $(window).resize(function() {
+                    var width = $(window).width();
+                    $('title').text("Techpedia" + width);
+                    setContentWidth();
+                });
+            }
+
+            /* content 영역 가로 길이 변경 */
+            function setContentWidth() {
+                var contentWidth = $("#wrap").width() - $("#menu").width();
+                $("#content").width(contentWidth);
+            }
+
+            function scrollPage() {
+                $("#content").on('mousewheel DOMMouseScroll', function(e){
+
+//                    var moveTop = null;
+//                    var delta = e.originalEvent.wheelDelta;
+//                    if(delta > 0) {
+//                        if ($(this).next() != undefined) {
+//                            moveTop = $(this).next().offset().top;
+//                        }
+//                    }
+//                    else {
+//                        if ($(this).prev() != undefined) {
+//                            moveTop = $(this).prev().offset().top;
+//                        }
+//                    }
+//                    alert($(this).next().offset().top);
+//                    alert("hoho")
+                    // 화면 이동 0.8초(800)
+                    $("#content").stop().animate({
+                        "top" : 100
+                    }, 400, function() {
+
+                    });
+
+                });
+            }
         })
 
     </script>
 </head>
 <body>
+
     <div id="wrap">
         <div id="header"></div>
-        <div id="menu"></div>
-        <div id="container"></div>
+        <div id="container">
+            <div id="menu"></div>
+            <div  id="content">
+                <div class="page001">
+                    <a href="#target" class="scroll">Scroll to target</a>
+                </div>
+                <div class="page002">
+
+                </div>
+            </div>
+        </div>
         <div id="footer"></div>
     <!--<div class="bg_logo">-->
         <!--<img src="/images/600_300_TURQUOISE.jpg">-->
