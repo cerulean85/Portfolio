@@ -1,5 +1,6 @@
-
 package-lock.json
 package.json
 package-lock.json
 .idea/workspace.xml
+
+ignore-dir/node_modules
