@@ -11,54 +11,68 @@
     <script>
         $(document).ready(function(){
 
-            setContentWidth();
+            setDistrict();
             windowResize();
-            scrollPage();
+            wheel();
 
-            $("#content").animate({
-                top : 100
-            }, 400, function() {
-
-            });
+//            $("#content").animate({top: '-500px'});
+//            $("#content").animate({
+//                top : 100
+//            }, 400, function() {
+//
+//            });
 
             /* 브라우즈 창 크기가 변경될 때의 설정 */
             function windowResize() {
                 $(window).resize(function() {
-                    var width = $(window).width();
-                    $('title').text("Techpedia" + width);
-                    setContentWidth();
+                    $('title').text("Techpedia" + width('window'));
+                    setDistrict();
                 });
             }
 
-            /* content 영역 가로 길이 변경 */
-            function setContentWidth() {
-                var contentWidth = $("#wrap").width() - $("#menu").width();
-                $("#content").width(contentWidth);
+            function width(type) {
+                switch(type) {
+                    case 'mobile':
+                        return 1440;
+                    case 'window' :
+                        return $(window).width();
+                    case 'content':
+                        return $("#wrap").width() - ($(window).width() > width('mobile') ? $("#menu").width() : 0);
+                    case 'menu':
+                        return $(window).width() > width('mobile') ? $("#menu").width() : 0;
+                }
+                return -1;
             }
 
-            function scrollPage() {
+            function height(type) {
+                switch(type) {
+                    case 'page':
+                        return $(".page001").height();
+                }
+                return -1;
+            }
+
+            /* content 영역 가로 길이 변경 */
+            function setDistrict() {
+                $("#content").width(width('content'));
+                $("#content").css("left", width('window') > width('mobile') ? width('menu'): 0);
+                $("#menu").css("display", width('window') > width('mobile') ? 'inline' : 'none');
+            }
+
+            var currentPageNo = 0;
+            var currentOffset = 44;
+            var lastPageNo = 3;
+            function wheel() {
                 $("#content").on('mousewheel DOMMouseScroll', function(e){
 
-//                    var moveTop = null;
-//                    var delta = e.originalEvent.wheelDelta;
-//                    if(delta > 0) {
-//                        if ($(this).next() != undefined) {
-//                            moveTop = $(this).next().offset().top;
-//                        }
-//                    }
-//                    else {
-//                        if ($(this).prev() != undefined) {
-//                            moveTop = $(this).prev().offset().top;
-//                        }
-//                    }
-//                    alert($(this).next().offset().top);
-//                    alert("hoho")
-                    // 화면 이동 0.8초(800)
-                    $("#content").stop().animate({
-                        "top" : 100
-                    }, 400, function() {
+                    var delta = e.originalEvent.wheelDelta;
+                    if(delta>0 && currentPageNo==0) return;
+                    if(delta<0 && currentPageNo==lastPageNo) return;
 
-                    });
+                    currentOffset += height('page') * (delta > 0 ? 1 : -1);
+                    $("#content").animate({top: currentOffset+'px'});
+//                    console.log($("#content").offset().top);
+                    currentPageNo = currentPageNo + (delta > 0 ? -1 : 1);
 
                 });
             }
@@ -69,18 +83,25 @@
 <body>
 
     <div id="wrap">
-        <div id="header"></div>
+
         <div id="container">
             <div id="menu"></div>
-            <div  id="content">
+            <div id="content">
                 <div class="page001">
-                    <a href="#target" class="scroll">Scroll to target</a>
+                    <a href="#target" class="scroll">Scroll to target1</a>
                 </div>
                 <div class="page002">
-
+                    <a href="#target" class="scroll">Scroll to target2</a>
+                </div>
+                <div class="page003">
+                    <a href="#target" class="scroll">Scroll to target3</a>
+                </div>
+                <div class="page004">
+                    <a href="#target" class="scroll">Scroll to target4</a>
                 </div>
             </div>
         </div>
+        <div id="header"></div>
         <div id="footer"></div>
     <!--<div class="bg_logo">-->
         <!--<img src="/images/600_300_TURQUOISE.jpg">-->
