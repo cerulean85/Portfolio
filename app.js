@@ -8,6 +8,6 @@ app.get('/', function (req, res) {
     console.log('Some user connected.');
     res.sendFile(__dirname + '/app/index.html');
 });
-var server = app.listen(8080, function () {
+var server = app.listen(80, function () {
     console.log('Executed Server!!');
 });
