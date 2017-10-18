@@ -1,0 +1,8 @@
+<div ng-controller="MenuCtrl">
+    <div class="menu_item" ng-repeat="detail in details">
+        {{detail.name}}
+        <div class="menu_subitem" ng-repeat="detailed in details.name">
+            {{detailed.prof}}
+        </div>
+    </div>
+</div>

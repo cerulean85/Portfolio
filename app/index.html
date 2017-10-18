@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
 
     <title>Techpedia</title>
-    <link rel="stylesheet" type="text/css" href="/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="/css/framework.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="/js/container.js"></script>
+    <script type="text/javascript" src="/js/directive.js"></script>
 
 
     <script>
@@ -91,16 +92,11 @@
 </head>
 <body>
 
-    <div id="wrap">
+    <div id="wrap" >
+        <div id="container">
 
-        <div id="container" ng-app="container" >
-            <div id="menu" ng-controller="MenuCtrl">
-                <div class="menu_item" ng-repeat="detail in details">
-                    {{detail.name}}
-                    <div class="menu_subitem" ng-repeat="detailed in details.name">
-                        {{detailed.prof}}
-                    </div>
-                </div>
+            <div id="menu" ng-app="menu">
+                <menu-directive></menu-directive>
             </div>
             <div id="content">
                 <div class="page001">
@@ -119,6 +115,9 @@
         </div>
         <div id="header"></div>
         <div id="footer"></div>
+
+
+
     <!--<div class="bg_logo">-->
         <!--<img src="/images/600_300_TURQUOISE.jpg">-->
     <!--</div>-->
