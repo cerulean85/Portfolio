@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2c9263-1acc-491f-ba79-e2992603ad8b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/api.js" afterPath="$PROJECT_DIR$/app/js/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/router.js" afterPath="$PROJECT_DIR$/app/js/router.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +42,7 @@
             <entry file="file://$PROJECT_DIR$/app/js/router.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="76">
-                  <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+                  <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -164,8 +163,8 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/database.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
-        <option value="$PROJECT_DIR$/app/js/router.js" />
         <option value="$PROJECT_DIR$/app/js/api.js" />
+        <option value="$PROJECT_DIR$/app/js/router.js" />
       </list>
     </option>
   </component>
@@ -282,7 +281,7 @@
       <workItem from="1508202891421" duration="5839000" />
       <workItem from="1508291902713" duration="4324000" />
       <workItem from="1508400469848" duration="868000" />
-      <workItem from="1508728680710" duration="1275000" />
+      <workItem from="1508728680710" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="qwe">
       <created>1508081231103</created>
@@ -295,7 +294,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35048000" />
+    <option name="totallyTimeSpent" value="35102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -659,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/app/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding />
         </state>
       </provider>
