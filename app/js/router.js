@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var dir = require('./api');
-router.get('/test', dir.getTest);
+var api = require('./api');
+router.get('/test', api.getTest);
+router.post('/test', api.postTest);
 
 module.exports = router;

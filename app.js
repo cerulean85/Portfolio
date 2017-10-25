@@ -12,3 +12,6 @@ app.get('/', function (req, res) {
 var server = app.listen(8080, function () {
     console.log('Executed Server!!');
 });
+
+var api = require('./app/js/router');
+app.use('/', api);

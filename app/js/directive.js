@@ -1,5 +1,9 @@
 angular.module('menu', [])
-    .controller('MenuCtrl', function($scope) {
+    .controller('MenuCtrl', function($scope, $http) {
+        $scope.test = function() {
+            console.log('qwqwqw');
+            $scope.result = $http.get('test');
+        };
         $scope.details = [
             { "name": "Employees" },
             { "name": "Support" }
