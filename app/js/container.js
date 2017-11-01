@@ -3,11 +3,11 @@ var app = angular.module('container', []);
 app.controller('MenuCtrl', function($scope) {
 
     $scope.details = [
-        { "name": "Employees" },
-        { "name": "Support" }
+        { "name": "Employees111" },
+        { "name": "Support111" }
     ];
     $scope.details.name = [
-        { "prof": "enginerr" },
-        { "prof": "doctor" }
+        { "prof": "enginerr111" },
+        { "prof": "doctor111" }
     ];
 });

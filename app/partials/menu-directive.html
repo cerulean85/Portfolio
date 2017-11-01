@@ -1,8 +1,8 @@
-<div ng-controller="MenuCtrl">
-    <div class="menu_item" ng-repeat="detail in details">
-        {{detail.name}}
-        <div class="menu_subitem" ng-repeat="detailed in details.name">
-            {{detailed.prof}}
-        </div>
+<div ng-repeat="main in menu">
+    <div class="menu_item"  ng-click="loadMainMenu(main.id)">
+        {{main.title}}
+    </div>
+    <div class="menu_subitem" ng-repeat="sub in main.children" ng-click="loadSubMenu(main.id, sub.id)">
+        {{sub.title}}
     </div>
 </div>

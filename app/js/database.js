@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var dbAccount = {
-    host : '35.201.163.239',
+    host : '35.194.157.43',
     user : 'root',
     password : '12345678',
     port     : '3306',
